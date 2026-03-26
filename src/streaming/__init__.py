@@ -1,3 +1,3 @@
-from .stream_simulator import EventStreamSimulator
-from .realtime_processor import RealtimeStreamProcessor
-from .dashboard import LiveDashboard
+from streaming.stream_simulator import EventStreamSimulator
+from streaming.realtime_processor import RealtimeStreamProcessor
+from streaming.dashboard import LiveDashboard

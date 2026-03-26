@@ -2,9 +2,9 @@
 Módulo de Recomendación - Integra LSH + Count-Min Sketch + LRU Cache
 """
 
-from ..structures.lsh_minhash import VideoRecommender
-from ..structures.count_min_sketch import TopKTracker
-from .lru_cache import LRUCache
+from structures.lsh_minhash import VideoRecommender
+from structures.count_min_sketch import TopKTracker
+from system.lru_cache import LRUCache
 
 
 class RecommendationEngine:

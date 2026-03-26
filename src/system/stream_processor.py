@@ -12,11 +12,11 @@ Orquesta todas las estructuras de datos:
 
 import time
 from typing import Optional
-from .priority_queue import PriorityQueue, Event, Priority
-from .lru_cache import LRUCache
-from .recommender import RecommendationEngine
-from ..structures.bloom_filter import BotDetector
-from ..structures.trie import SearchAutocomplete
+from system.priority_queue import PriorityQueue, Event, Priority
+from system.lru_cache import LRUCache
+from system.recommender import RecommendationEngine
+from structures.bloom_filter import BotDetector
+from structures.trie import SearchAutocomplete
 
 
 class StreamProcessor:

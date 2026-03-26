@@ -7,7 +7,7 @@ Muestra métricas del sistema actualizándose cada segundo.
 import time
 import threading
 import os
-from .realtime_processor import RealtimeStreamProcessor
+from streaming.realtime_processor import RealtimeStreamProcessor
 
 
 def _clear():

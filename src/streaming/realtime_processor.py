@@ -39,8 +39,8 @@ from collections import deque, defaultdict
 from typing import Optional, Callable
 from dataclasses import dataclass, field
 
-from .stream_simulator import EventStreamSimulator, RawEvent
-from ..system.stream_processor import StreamProcessor
+from streaming.stream_simulator import EventStreamSimulator, RawEvent
+from system.stream_processor import StreamProcessor
 
 
 @dataclass
