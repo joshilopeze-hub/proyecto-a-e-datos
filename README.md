@@ -65,39 +65,6 @@ Stream de Eventos (10M)
 
 ---
 
-## Instalación
-
-```bash
-git clone https://github.com/joshilopeze-hub/proyecto-a-e-datos.git
-cd proyecto-a-e-datos
-pip install -r requirements.txt
-```
-
----
-
-## Uso
-
-### Demo rápida del sistema completo
-```bash
-cd src
-python main.py
-```
-
-### Generar dataset sintético
-```bash
-# Dataset de 1 millon de eventos (~150 MB)
-python data/generate_dataset.py --events 1000000 --output data/events_1M.csv
-
-# Dataset completo de 10 millones
-python data/generate_dataset.py --events 10000000 --output data/events_10M.csv
-```
-
-### Ejecutar notebooks de análisis
-```bash
-jupyter notebook notebooks/
-```
-
----
 
 ## Estructura del Repositorio
 
