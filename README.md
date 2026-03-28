@@ -7,10 +7,11 @@
 ---
 
 ## Integrantes
-- Estudiante 1 (email)
-- Estudiante 2 (email)
-- Estudiante 3 (email)
-- Estudiante 4 (email)
+- Armando Fortunato Canales Gomez de La Torre
+- Freundt Cuadros Piero Antoniolli
+- López Espada, Joshi Azeret Adrián 
+- Miranda Barrueto, Renato Alonso
+- Trujillo Ramos Diego Alberto
 
 ---
 
