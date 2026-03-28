@@ -64,7 +64,7 @@ Stream de Eventos (10M)
 ```
 
 ---
-
+![Arquitectura Stream de Eventos](diagrama.png)
 
 ## Estructura del Repositorio
 
