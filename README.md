@@ -38,32 +38,6 @@ Sistema de procesamiento de streams de datos en tiempo real que simula una plata
 
 ## Arquitectura del Sistema
 
-```
-Stream de Eventos (10M)
-        |
-        v
-+---------------------+
-|   Priority Queue    |  <- Heap: Premium/Pagos primero
-|   (Binary Heap)     |
-+--------+------------+
-         | procesar()
-    +----+------------------------------------------+
-    |                                               |
-    v                                               v
-+--------------+                        +------------------+
-| Bot Detector |                        |  Search Engine   |
-|(Bloom Filter)|                        |     (Trie)       |
-+--------------+                        +------------------+
-    |                                               |
-    v                                               v
-+--------------------------------------------------+
-|             Recommendation Engine               |
-|  MinHash+LSH (similitud) + Count-Min (Top-K)    |
-|              LRU Cache (resultados)             |
-+--------------------------------------------------+
-```
-
----
 ![Arquitectura Stream de Eventos](diagrama.png)
 
 ## Estructura del Repositorio
