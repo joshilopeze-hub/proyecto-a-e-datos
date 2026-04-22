@@ -57,3 +57,6 @@ class RecommendationEngine:
             "top_k": self.top_k.stats(),
             "rec_cache": self.rec_cache.stats(),
         }
+
+# Alias para compatibilidad con notebooks
+Recommender = RecommendationEngine

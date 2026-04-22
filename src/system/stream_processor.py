@@ -27,18 +27,17 @@ class StreamProcessor:
     en tiempo real con múltiples estructuras de datos avanzadas.
     """
 
-    def __init__(self, cache_size: int = 1000):
+    def __init__(self, cache_size: int = 1000, cache_capacity: int = None,
+                 top_k: int = 1000, expected_users: int = 1_000_000):
+        # Compatibilidad: cache_capacity tiene precedencia sobre cache_size
+        effective_cache = cache_capacity if cache_capacity is not None else cache_size
         # Cola de prioridad para eventos
         self.event_queue = PriorityQueue()
 
         # Caché de videos más accedidos
-        self.content_cache = LRUCache(capacity=cache_size)
-
-        # Motor de recomendaciones (LSH + Count-Min Sketch)
-        self.recommender = RecommendationEngine(top_k_cache=cache_size)
-
-        # Detección de bots
-        self.bot_detector = BotDetector(expected_users=1_000_000)
+        self.content_cache = LRUCache(capacity=effective_cache)
+        self.recommender = RecommendationEngine(top_k_cache=top_k)
+        self.bot_detector = BotDetector(expected_users=expected_users)
 
         # Autocompletado
         self.autocomplete = SearchAutocomplete()

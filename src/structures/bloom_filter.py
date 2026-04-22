@@ -79,6 +79,10 @@ class BloomFilter:
         """Calcula la tasa real de falsos positivos dado el número de inserciones."""
         return (1 - math.exp(-self.k * self.count / self.m)) ** self.k
 
+    def fill_ratio(self) -> float:
+        """Proporción de bits en 1. Útil para monitorear saturación del filtro."""
+        return float(self.bit_array.count()) / len(self.bit_array)
+
     def memory_bytes(self) -> int:
         """Retorna el uso de memoria en bytes."""
         return self.m // 8

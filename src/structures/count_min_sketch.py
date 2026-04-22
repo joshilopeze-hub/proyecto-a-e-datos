@@ -70,6 +70,10 @@ class CountMinSketch:
             for row in range(self.depth)
         ))
 
+    def estimate(self, item: str) -> int:
+        """Alias de query(). Estima la frecuencia del item. O(d)"""
+        return self.query(item)
+
     def memory_bytes(self) -> int:
         return self.table.nbytes
 
