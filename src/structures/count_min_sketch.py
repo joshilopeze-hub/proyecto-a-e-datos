@@ -77,6 +77,10 @@ class CountMinSketch:
     def memory_bytes(self) -> int:
         return self.table.nbytes
 
+    def error_bound(self) -> float:
+        """Retorna el error absoluto máximo garantizado: ε × N (total de eventos)."""
+        return self.epsilon * self.total
+
     def __repr__(self):
         return (
             f"CountMinSketch(ε={self.epsilon}, δ={self.delta}, "
