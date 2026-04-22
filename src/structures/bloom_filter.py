@@ -102,12 +102,12 @@ class BotDetector:
     Detecta el patrón: mismo user_id visto desde múltiples IPs.
     """
 
-    def __init__(self, expected_users: int = 1_000_000):
+    def __init__(self, expected_users: int = 1_000_000, bot_threshold: int = 3):
         # Filtro para pares (user_id, ip) ya vistos
         self.seen_pairs = BloomFilter(n=expected_users * 5, fp_rate=0.001)
         # Conteo exacto de IPs por usuario (solo para los marcados como sospechosos)
         self.suspicious_users: dict[str, set] = {}
-        self.THRESHOLD = 3  # Más de 3 IPs distintas = sospechoso
+        self.THRESHOLD = bot_threshold  # Más de N IPs distintas = sospechoso
 
     def register_event(self, user_id: str, ip: str) -> bool:
         """
